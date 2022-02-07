@@ -15,7 +15,7 @@ body {
 }
 
 main {
-    padding: 15px;
+    padding: 3em;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -45,7 +45,7 @@ h1.time {
     width: 440px;
     height: 120px;
     border-radius: 10px;
-    padding: 0.5em;
+    padding: 0.75em 0 0;
 }
 
 .weather-city {
@@ -99,6 +99,38 @@ h1.time {
 }
 
 
+/* WINDOW SWAP */
+
+.window-swap {
+    background-color: rgba(192, 190, 190, 0.685);
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 20px white solid;
+}
+
+.window-button {
+    border: none;
+    height: 160px;
+    font-size: 1.25rem;
+    margin: 0;
+    background-color: rgba(192, 190, 190, 0.685);
+
+}
+
+#window-link {
+    text-decoration: none;
+    color: white;.
+    text-shadow: 0px 0px 25px #999999;
+}
+
+#window-link:hover {
+    text-decoration: none;
+    color: skyblue;
+}
+
 /* BOTTOM SECTION */
 
 .bottom {
@@ -106,6 +138,14 @@ h1.time {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+}
+
+.image-link {
+    color: inherit;
+}
+
+.image-link:hover {
+    color: #999999;
 }
 
 #yoga > a {
