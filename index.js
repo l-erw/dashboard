@@ -73,6 +73,32 @@ navigator.geolocation.getCurrentPosition(position => {
         .catch(err => console.error(err))
 });
 
+fetch("https://motivational-quotes1.p.rapidapi.com/motivation", {
+	"method": "POST",
+	"headers": {
+		"content-type": "application/json",
+		"x-rapidapi-host": "motivational-quotes1.p.rapidapi.com",
+		"x-rapidapi-key": "7d55d2f46amsh644854ca603c816p18d409jsn4d0a9ef14d7d"
+	},
+	"body": {
+		"key1": "value",
+		"key2": "value"
+	}
+})
+.then(response => {
+	console.log(response);
+    document.getElementById("quote").innerHTML = `
+    <p></p>`
+})
+.catch(err => {
+	console.error(err);
+});
+
+// https://www.google.com/maps/embed/v1/directions
+//   ?key=YOUR_API_KEY
+//   &origin=Cambridge+UK
+//   &destination=Sawston+UK
+
 // function loadNewVideo() {
 //     const videoId = ["tLcHTdzykgk", "GcclN_MKWsI", 
 //                     "qj9YLsjdAJg", "wDIr92u-2cY", 
