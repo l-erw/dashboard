@@ -33,11 +33,16 @@ navigator.geolocation.getCurrentPosition(position => {
             return res.json()
         })
         .then(data => {
+            
+            function addZero(i) {
+                if (i < 10) {i = "0" + i}
+                return i;
+              }
             const sunriseUnix = `${data.sys.sunrise}`
             const sunriseTime = new Date(sunriseUnix*1000)
             const sunriseHours = new Date(sunriseTime).getHours()
             const sunriseMinutes = new Date(sunriseTime).getMinutes()
-            
+            addZero(sunriseMinutes)
             const sunsetUnix = `${data.sys.sunset}`
             const sunsetTime = new Date(sunsetUnix*1000)
             const sunsetHours = new Date(sunsetTime).getHours()
@@ -60,7 +65,7 @@ navigator.geolocation.getCurrentPosition(position => {
 
                     <div class="sunrise">
                             <img class="sunrise-icon" src="./Sunrise2.png"/>
-                            <p class="sunrise-time">${sunriseHours}:${sunriseMinutes}</p>
+                            <p class="sunrise-time">${sunriseHours}:0${sunriseMinutes}</p>
                     </div> 
                     
                     <div class="sunset">
@@ -73,26 +78,26 @@ navigator.geolocation.getCurrentPosition(position => {
         .catch(err => console.error(err))
 });
 
-fetch("https://motivational-quotes1.p.rapidapi.com/motivation", {
-	"method": "POST",
-	"headers": {
-		"content-type": "application/json",
-		"x-rapidapi-host": "motivational-quotes1.p.rapidapi.com",
-		"x-rapidapi-key": "7d55d2f46amsh644854ca603c816p18d409jsn4d0a9ef14d7d"
-	},
-	"body": {
-		"key1": "value",
-		"key2": "value"
-	}
-})
-.then(response => {
-	console.log(response);
-    document.getElementById("quote").innerHTML = `
-    <p></p>`
-})
-.catch(err => {
-	console.error(err);
-});
+// fetch("https://motivational-quotes1.p.rapidapi.com/motivation", {
+// 	"method": "POST",
+// 	"headers": {
+// 		"content-type": "application/json",
+// 		"x-rapidapi-host": "motivational-quotes1.p.rapidapi.com",
+// 		"x-rapidapi-key": "7d55d2f46amsh644854ca603c816p18d409jsn4d0a9ef14d7d"
+// 	},
+// 	"body": {
+// 		"key1": "value",
+// 		"key2": "value"
+// 	}
+// })
+// .then(response => {
+// 	console.log(response);
+//     document.getElementById("quote").innerHTML = `
+//     <p></p>`
+// })
+// .catch(err => {
+// 	console.error(err);
+// });
 
 // https://www.google.com/maps/embed/v1/directions
 //   ?key=YOUR_API_KEY
