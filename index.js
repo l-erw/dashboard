@@ -65,7 +65,7 @@ navigator.geolocation.getCurrentPosition(position => {
 
                     <div class="sunrise">
                             <img class="sunrise-icon" src="./Sunrise2.png"/>
-                            <p class="sunrise-time">${sunriseHours}:0${sunriseMinutes}</p>
+                            <p class="sunrise-time">${sunriseHours}:${sunriseMinutes}</p>
                     </div> 
                     
                     <div class="sunset">
