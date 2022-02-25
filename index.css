@@ -113,7 +113,6 @@ h1.time {
     font-size: 1.125rem;
     padding: 0.75em;
     border-radius: 10px;
-    /* border: white 3px solid; */
 }
 
 #window-link:hover {
@@ -121,8 +120,6 @@ h1.time {
     color: rgb(0, 183, 255);
     background-color: white;
     text-shadow: none;
-    /* border: rgb(0, 183, 255) 3px solid; */
-    
 }
 
 /* BOTTOM SECTION */
