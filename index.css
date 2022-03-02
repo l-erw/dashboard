@@ -31,7 +31,7 @@ div.top {
 /* TIME */
 h1.time {
     text-align: center;
-    font-size: 4rem;
+    font-size: 5rem;
     margin-top: 0;
 }
 
@@ -97,6 +97,35 @@ h1.time {
     align-items: center;
     justify-content: center;
     font-size: 0.85rem;
+}
+
+/* WEATHER ERROR  */
+h4 {
+    text-align: center;
+    padding: 1.5em;
+    font-weight: 400;
+}
+
+.link {
+    color:rgb(0, 183, 255);
+}
+
+/* WEATHER LOADING */
+
+.loader {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-top: 7px #00b7ff solid;
+    border-bottom: 7px #00b7ff solid;
+    border-left: 7px white solid;
+    border-right: 7px white solid;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
 }
 
 
