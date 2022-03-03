@@ -113,14 +113,13 @@ h4 {
 /* WEATHER LOADING */
 
 .loader {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
+    background-color:#f4db87;
     border-radius: 50%;
-    border-top: 7px #00b7ff solid;
-    border-bottom: 7px #00b7ff solid;
-    border-left: 7px white solid;
-    border-right: 7px white solid;
-    animation: spin 2s linear infinite;
+    border: 10px #c0bebe80 dotted;
+
+    animation: spin 2500ms linear infinite;
 }
 
 @keyframes spin {
@@ -136,7 +135,7 @@ h4 {
 
 #window-link {
     text-decoration: none;
-    background-color: rgba(192, 190, 190, 0.685);
+    background-color: #c0bebeaf;
     color: white;
     text-shadow: 0px 0px 25px #999999;
     font-size: 1.125rem;
